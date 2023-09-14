@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        h1{
+            background-color: aquamarine;
+            color:black;
+            animation-name: example;
+            animation-duration: 120s;
+        }
+        @keyframes example {
+            0%{background-color: aqua;}
+            10%{background-color: azure;}
+            25%{background-color:blueviolet;}
+            50%{background-color: brown;}
+            75%{background-color: greenyellow;}
+        }
+        body{
+            background-size:100%;
+            background-color: aquamarine;
+            color:black;
+            animation-name: example;
+            animation-duration: 120s;
+
+        }
+        div{
+    text-align: center;
+    font-size: larger;
+}
+h1{
+    text-align: center;
+}
+#name{
+    margin-top: 5%;
+}
+#email{
+    margin-top: 20px;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email sender</title>
+</head>
+<body>
+        <h1>Email Sender</h1>
+        <div>
+        <form action="{{ url_for('login') }}" method="post">
+        Name <input type="text" name="uname" id="name" placeholder="name" required><br>
+        Email <input type="email" name="uemail" id="email" placeholder="email" required><br>
+        <h2>Message</h2> <br>
+        <textarea name="uta" id="ta"  rows="10" cols="50">Enter Message Here
+        </textarea><br>
+        <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        </div>
+</body>
+</html>
